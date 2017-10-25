@@ -208,3 +208,9 @@
   overflow: hidden;
   font-size: 30px;
 }
+/*bottomlog*/
+.bottomlog{
+	width:100px;
+	height:100px;
+	background:url(https://ooo.0o0.ooo/2017/10/25/59f0a2c593007.png)no-repeat center;
+}
