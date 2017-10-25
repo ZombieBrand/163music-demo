@@ -1,70 +1,210 @@
 /*顶部导航栏*/
-.topbar{
-	display:flex;
-	justify-content:space-between;
-	align-items:center;
-	background:#d43c33;
-	min-height:64px;
-	padding:0 10px;
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #d43c33;
+  min-height: 64px;
+  padding: 0 10px;
 }
-.log>svg{
-	min-width:142px;
-	min-height:25px;
-	vertical-align:top;
+.log > svg {
+  min-width: 142px;
+  min-height: 25px;
+  vertical-align: top;
 }
-.topbar>a{
-	font-size:15px;
-	color:white;
-	padding:4px 9.5px;
-	position:relative;
-	top:-1px;
-	left:-1px;
+.topbar > a {
+  font-size: 15px;
+  color: white;
+  padding: 4px 9.5px;
+  position: relative;
+  top: -1px;
+  left: -1px;
 }
-.topbar>a::after{
-	position:absolute;
-	top:0px;
-	left:0px;
-	content:'';
-	border:1px solid white;
-	border-radius:37.5%/100%;
-	width:200%;
-	height:200%;
-	transform:scale(0.5);
-	transform-origin:0 0;
+.topbar > a::after {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  content: "";
+  border: 1px solid white;
+  border-radius: 37.5%/100%;
+  width: 200%;
+  height: 200%;
+  transform: scale(0.5);
+  transform-origin: 0 0;
 }
 /*------------tabs-------------*/
-.globaltabs{
-	border-bottom:2px solid #ccc;
-	max-height:80px;
-	transform:scale(0.5);
+.globaltabs {
+  max-height: 40px;
+  position: relative;
 }
-.globaltabs>ol{
-	display:flex;
-
+.globaltabs::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 200%;
+  border-bottom: 1px solid #ccc;
+  transform: scale(0.5);
+  transform-origin: 0 0;
 }
-.globaltabs li{
-	text-align:center;
-	flex:1;
+.globaltabs > ol {
+  display: flex;
 }
-.globaltabs li>div{
-	display:inline-block;
+.globaltabs li {
+  text-align: center;
+  flex: 1;
+}
+.globaltabs li > div {
+  display: inline-block;
+  position: relative;
+  top: 1px;
+  padding: 0 5px;
+}
+.globaltabs li.active > div::after {
+  content: "";
+  position: absolute;
+  bottom: 1px;
+  left: 0;
+  width: 100%;
+  background: #d43c33;
+  height: 2px;
+}
+.globaltabs span {
+  font-size: 15px;
+  line-height: 40px;
+}
+.globaltabs .active > div > span {
+  color: #d43c33;
+}
+/* playlist */
+.playlist {
+  padding-top: 20px;
+}
+.sectionTitle {
+  font-size: 17px;
+  padding-left: 9px;
+  line-height: 20px;
+  position: relative;
+  margin-bottom: 14px;
+}
+.sectionTitle::after {
+  content: "";
+  border-left: 2px solid #d43c33;
+  position: absolute;
+  top: 1px;
+  left: 0;
+  height: 80%;
+}
+.warperMusic {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 23px;
+}
+.warperMusic > li {
+  width: 32.8%;
+  margin-bottom: 16px;
+  position: relative;
+}
+.warperimg {
+  position: relative;
+}
+.warperimg > img {
+  width: 100%;
+  height: 100%;
+  vertical-align: top;
+}
+.describe {
+  font-size: 13px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  padding: 6px 2px 0 6px;
+  line-height: 1.2;
+}
+.warperimg::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 20%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), transparent);
+}
+.flow {
+  position: absolute;
+  top: 2px;
+  right: 5px;
+  color: white;
+  z-index: 2;
+  font-size: 12px;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zd…4xNDUuNTY5LS4zNi43NTMuMjI0LjMzNC4zNi43Mi4zNiAxLjEzOHYyLjU1MiIvPjwvc3ZnPg==);
+  background-position: 0;
+  background-repeat: no-repeat;
+  background-size: 11px 10px;
+  padding-left: 14px;
+}
+/*updateMusic*/
+.updateMusic {
+	padding-top:6px;
+}
+.songlink{
+	display:block;
+	margin-left:10px;
 	position:relative;
-	top:1px;
-	padding:0 5px;
+	margin-bottom:12px;
 }
-.globaltabs li.active>div::after{
+.songlink::after{
 	content:'';
 	position:absolute;
-	bottom:1px;
+	bottom:-6px;
 	left:0;
+	background:#F1F1F2;
 	width:100%;
-	background:#d43c33;
-	height:2px;
+	height:1px;
 }
-.globaltabs span{
-	font-size:15px;
-	line-height:40px;
+.songlink > h2 {
+	font-size:17px; 
+	line-height:25px;
 }
-.globaltabs .active>div>span{
-	color:#d43c33;
+.description{
+	height:18px;
+	width:88%;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	overflow:hidden;
+}
+.description>span{
+	font-size:12px;
+	line-height:18px;
+	color:#888;
+	vertical-align:top;
+	margin-left:-2px;
+}
+.iconsq {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  color: #f98253;
+  overflow: hidden;
+  font-size: 14px;
+}
+.playbutton{
+	position:absolute;
+	top:50%;
+	right:5px;
+	transform:translateY(-50%);
+}
+.iconplay {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  color: #a8a8a9;
+  overflow: hidden;
+  font-size: 30px;
 }
