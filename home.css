@@ -131,6 +131,9 @@
 }
 .warperimg {
   position: relative;
+  background: transparent;
+  width: 32.796vw;
+  height: 32.796vw;
 }
 .warperimg > img {
   width: 100%;
