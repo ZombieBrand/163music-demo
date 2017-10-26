@@ -301,7 +301,7 @@
 	<script src='//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js'></script>
 	<script src="//at.alicdn.com/t/font_453429_i8ia3vxaxkihpvi.js"></script>
 	<script>
-		$('.globaltabs').on('clock', 'li', function (e) {
+		$('.globaltabs').on('click', 'li', function (e) {
 			let li = $(e.currentTarget)
 			let index = li.index()
 			li.addClass('active').siblings().removeClass('active')
