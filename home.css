@@ -95,7 +95,7 @@
 }
 /* playlist */
 .playlist {
-  margin-top: 15.6vh;
+  margin-top: 27.73vw;
   display: none;
 }
 .playlist.active {
@@ -279,4 +279,15 @@
 }
 .search.active {
   display: block;
+}
+/*-----------search-----------*/
+.searchBox{
+  margin-top:27.73vw;
+  width:100%;
+  height:100%;
+}
+.searchIp{
+  background:#EBECEC;
+  width:100%;
+  height:50px;
 }
