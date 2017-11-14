@@ -41,7 +41,7 @@ $(function() {
   function initPlayer(url) {
     video.src = url;
     video.oncanplay = function() {
-      video.play();
+      video.pause();
       $(".iconstop").on("click", function() {
         $(this).toggleClass("active");
         $(".iconplay").toggleClass("active");
