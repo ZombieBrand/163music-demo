@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html lang="zh-Hans">
 
 <head>
 	<meta charset='utf-8'>
@@ -115,8 +115,8 @@
 				</li>
 			</ol>
 			<h1 class="sectionTitle">最新音乐</h1>
-			<section class="updateMusic" id='updateMusic'>
-				<div class="loader" id='loader'>
+			<section class="updateMusic" id="updateMusic">
+				<div class="loader" id="loader">
 					<div class="line-scale-pulse-out">
 						<div></div>
 						<div></div>
@@ -180,19 +180,38 @@
 			</section>
 		</section>
 		<section class="hotlist">111111111</section>
-		<section class="searchwarper">
+		<section class="searchwarper no-collapse">
 			<div class="searchBox">
-				<svg class="icon" aria-hidden="true">
-					<use xlink:href="#icon-xxx"></use>
+				<svg class="icon searchicon" aria-hidden="true">
+					<use xlink:href="#icon-search"></use>
 				</svg>
-				<input type="text" class="searchIp" id="searchIp">
+				<input type="search" class="searchIp" id="searchIp" autocomplete="off">
+				<label class="holder">搜索歌曲、歌手、专辑</label>
 			</div>
+			<div class="borderBt"></div>
+			<h3 class="result" id="result"></h3>
+			<ul class="matching" id="matching"></ul>
+			<section class="hotMusic">
+				<h2>热门搜索</h2>
+				<ul class="songName">
+					<ol>时光废墟</ol>
+					<ol>好想要</ol>
+					<ol>Pizza</ol>
+					<ol>Wonderful</ol>
+					<ol>追光者</ol>
+					<ol>I Do</ol>
+					<ol>There for you</ol>
+					<ol>Lucky</ol>
+					<ol>Woman</ol>
+					<ol>许魏洲</ol>
+				</ul>
+			</section>
 		</section>
 	</div>
-	<script src='./vendors/jquery.min.js'></script>
-	<script src='./vendors/av-min.js'></script>
-	<script src='./home.js'></script>
-	<script src="//at.alicdn.com/t/font_453429_7352ovg87er0be29.js"></script>
+	<script src="./vendors/jquery.min.js"></script>
+	<script src="./vendors/av-min.js"></script>
+	<script src="./home.js"></script>
+	<script src="//at.alicdn.com/t/font_453429_j38ybifb2rxav2t9.js"></script>
 	<style>
 		.loader {
 			width: 16vw;
