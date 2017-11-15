@@ -134,7 +134,7 @@
 /*-------------songlyric-------------*/
 .songlyric {
   position:absolute;
-  top:60.05vh;
+  bottom:20vh;
   width: 100vw;
   color:#AEABAC;
   text-align:center;
