@@ -139,19 +139,6 @@
   color: #aeabac;
   text-align: center;
 }
-@media screen and (min-height: 600) {
-  .songlyric {
-    bottom: 20vh;
-  }
-}
-@media screen and(max-height:600){
-  .songlyric {
-    bottom: 10vh;
-  }
-.lyric{
-  height: 7vw;
-}
-}
 .songlyric > h1 {
   font-size: 4.35vw;
   margin-bottom: 1.9vw;
@@ -170,6 +157,20 @@
 }
 .lyricTransform > p.active {
   color: white;
+  
+}
+@media screen and (min-height: 600px) {
+  .songlyric {
+    bottom: 20vh;
+  }
+}
+@media screen and (max-height:500px){
+  .songlyric {
+    bottom: 13vh;
+  }
+.lyric{
+  height: 7vw;
+}
 }
 /*-------------actions-------------*/
 .actions {
