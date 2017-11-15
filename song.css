@@ -62,7 +62,7 @@
     no-repeat center;
   background-size: cover;
   filter: brightness(200%);
-  margin-top: 80px;
+  margin-top: 19.324vw;
   z-index: 5;
 }
 .circle .coverimg {
@@ -164,7 +164,7 @@
     bottom: 20vh;
   }
 }
-@media screen and (max-height:500px){
+@media screen and (max-height:550px){
   .songlyric {
     bottom: 13vh;
   }

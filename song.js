@@ -112,7 +112,7 @@ $(function() {
       $(".lyricTransform").append($p);
     });
   }
-  if(document.documentElement.clientHeight<500){
+  if(document.documentElement.clientHeight<550){
     $('.lyric').attr('style','height:24px')
   }
 });
