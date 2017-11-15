@@ -132,28 +132,24 @@
 }
 
 /*-------------songlyric-------------*/
+.songlyric {
+  position: absolute;
+  bottom: 20vh;
+  width: 100vw;
+  color: #aeabac;
+  text-align: center;
+}
 @media screen and (min-height: 600) {
   .songlyric {
-    position: absolute;
     bottom: 20vh;
-    width: 100vw;
-    color: #aeabac;
-    text-align: center;
-    flex-grow: 1;
   }
 }
 @media screen and(max-height:600){
   .songlyric {
-    position: absolute;
     bottom: 10vh;
-    width: 100vw;
-    color: #aeabac;
-    text-align: center;
-    flex-grow: 1;
   }
 .lyric{
   height: 7vw;
-  overflow: hidden;
 }
 }
 .songlyric > h1 {
