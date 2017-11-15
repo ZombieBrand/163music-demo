@@ -33,6 +33,9 @@
   background-color: rgba(0, 0, 0, 0.4);
 }
 /*-------------disk-------------*/
+.disk {
+  height: 58vh;
+}
 .disk .circle {
   width: 82.6vw;
   height: 82.6vw;
@@ -131,13 +134,18 @@
   z-index: 98;
 }
 
-/*-------------songlyric-------------*/
+/*-------------bottomwarper-------------*/
+.bottomwarper{
+  display:flex;
+  flex-direction:column;
+  height:42vh;
+}
 .songlyric {
-  position: absolute;
-  bottom: 20vh;
   width: 100vw;
   color: #aeabac;
   text-align: center;
+  flex-grow:1;
+  margin-top:5vw;
 }
 .songlyric > h1 {
   font-size: 4.35vw;
@@ -152,31 +160,37 @@
   transition: transform 0.5s linear;
 }
 .lyricTransform > p {
-  font-size: 3.86vw;
-  line-height: 7.73vw;
+  font-size: 3.87vw;
+  line-height: 7.74vw;
 }
 .lyricTransform > p.active {
   color: white;
-  
 }
-@media screen and (min-height: 600px) {
+@media screen and (max-height: 700px){
   .songlyric {
-    bottom: 20vh;
+    transform:translateY(30%);
+    margin-top:0;
   }
 }
-@media screen and (max-height:600px){
-  .songlyric {
-    bottom: 13vh;
+@media screen and (max-height: 600px) {
+  .lyric {
+    height:10vw;
   }
-.lyric{
-  height: 7vw;
-}
+  .lyricTransform > p{
+    font-size: 3.38vw;
+    line-height: 5vw;
+  }
+  .songlyric > h1 {
+    font-size: 3.38vw;
+    margin-bottom: 1vw;
+  }
+  .songlyric {
+    transform:translateY(60%);
+    margin-top:0;
+  }
 }
 /*-------------actions-------------*/
 .actions {
-  position: fixed;
-  bottom: 0;
-  left: 0;
 }
 .loadingapp {
   width: 100vw;

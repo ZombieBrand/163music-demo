@@ -102,7 +102,7 @@ $(function() {
           break;
         }
       }
-    }, 300);
+    }, 100);
     array.map(function(object) {
       if (!object) {
         return;
@@ -111,8 +111,5 @@ $(function() {
       $p.attr("data-time", object.time).text(object.lyric);
       $(".lyricTransform").append($p);
     });
-  }
-  if(document.documentElement.clientHeight<600){
-    $('.lyric').attr('style','height:7vw')
   }
 });
