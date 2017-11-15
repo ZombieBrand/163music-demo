@@ -61,7 +61,7 @@
   background: transparent url(//i.loli.net/2017/11/06/59fff87b63ae4.png)
     no-repeat center;
   background-size: cover;
-  filter:brightness(200%);
+  filter: brightness(200%);
   margin-top: 80px;
   z-index: 5;
 }
@@ -108,7 +108,7 @@
   }
 }
 
-.stylus.playing>.stylusimg {
+.stylus.playing > .stylusimg {
   position: absolute;
   top: 0;
   left: 50%;
@@ -116,53 +116,70 @@
   width: 110px;
   height: 157px;
   filter: blur(0.5px);
-  z-index:98;
+  z-index: 98;
 }
-.stylus>.stylusimg {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-19%) rotateZ(-20deg);
-    transform-origin:7% -2%;
-    transition:transform 0.5s;
-    width: 110px;
-    height: 157px;
-    filter: blur(0.5px);
-    z-index:98;
-  }
+.stylus > .stylusimg {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-19%) rotateZ(-20deg);
+  transform-origin: 7% -2%;
+  transition: transform 0.5s;
+  width: 110px;
+  height: 157px;
+  filter: blur(0.5px);
+  z-index: 98;
+}
 
 /*-------------songlyric-------------*/
-.songlyric {
-  position:absolute;
-  bottom:20vh;
-  width: 100vw;
-  color:#AEABAC;
-  text-align:center;
-  flex-grow:1;
+@media screen and (min-height: 600) {
+  .songlyric {
+    position: absolute;
+    bottom: 20vh;
+    width: 100vw;
+    color: #aeabac;
+    text-align: center;
+    flex-grow: 1;
+  }
+}
+@media screen and(max-height:600){
+  .songlyric {
+    position: absolute;
+    bottom: 10vh;
+    width: 100vw;
+    color: #aeabac;
+    text-align: center;
+    flex-grow: 1;
+  }
+.lyric{
+  height: 7vw;
+  overflow: hidden;
+}
 }
 .songlyric > h1 {
-  font-size:4.35vw;
-  margin-bottom:1.9vw;
+  font-size: 4.35vw;
+  margin-bottom: 1.9vw;
 }
-.lyric{
-  height:23.5vw;
-  overflow:hidden;
+
+.lyric {
+  height: 23.5vw;
+  overflow: hidden;
 }
-.lyricTransform{
-  transition:transform 0.5s linear;
+.lyricTransform {
+  transition: transform 0.5s linear;
 }
 .lyricTransform > p {
-  font-size:3.86vw;
-  line-height:7.73vw;
+  font-size: 3.86vw;
+  line-height: 7.73vw;
 }
-.lyricTransform >p.active{
-  color:white;
+.lyricTransform > p.active {
+  color: white;
 }
 /*-------------actions-------------*/
 .actions {
-  position:fixed;
-  bottom:0;
-  left:0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
 }
 .loadingapp {
   width: 100vw;
@@ -223,5 +240,3 @@
 .iconplay {
   display: none;
 }
-
-
