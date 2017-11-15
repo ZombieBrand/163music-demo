@@ -71,7 +71,7 @@
   left: 50%;
   width: 70%;
   transform: translate(-50%, -50%);
-  margin-top: 80px;
+  margin-top: 19.324vw;
   border-radius: 50%;
   z-index: -1;
 }
@@ -113,8 +113,8 @@
   top: 0;
   left: 50%;
   transform: translateX(-19%);
-  width: 110px;
-  height: 157px;
+  width: 26.57vw;
+  height: 37.92vw;
   filter: blur(0.5px);
   z-index: 98;
 }
@@ -125,8 +125,8 @@
   transform: translateX(-19%) rotateZ(-20deg);
   transform-origin: 7% -2%;
   transition: transform 0.5s;
-  width: 110px;
-  height: 157px;
+  width: 26.57vw;
+  height: 37.92vw;
   filter: blur(0.5px);
   z-index: 98;
 }
@@ -164,7 +164,7 @@
     bottom: 20vh;
   }
 }
-@media screen and (max-height:550px){
+@media screen and (max-height:600px){
   .songlyric {
     bottom: 13vh;
   }
