@@ -14,6 +14,10 @@ $(function() {
       .siblings()
       .removeClass("active");
   });
+  /**歌单 */
+  $(".warperMusic").on("click", "li", function() {
+    window.location.href = "./playlist.html";
+  });
 
   /**将七牛存储数据推送到leancloud */
   var APP_ID = "dkIJBHfaV9puzkRqVipWFH8s-gzGzoHsz";
@@ -59,6 +63,8 @@ $(function() {
         </a>
         `;
         $a.append(a);
+        hotMusic(song, results[i]);
+        hotlist(song,results[i],i)
       }
     },
     function(error) {}
@@ -114,4 +120,37 @@ $(function() {
       );
     }, 400);
   });
+  /** 热门搜索 */
+  function hotMusic(song, results) {
+    $(".songName").on("click", "ol", function() {
+      let olName = this.innerText;
+      if (olName === song.name) {
+        window.location.href = `song.html?id=${results.id}`;
+      } else {
+        console.log("歌曲名字不存在");
+        return undefined;
+      }
+    });
+  }
+  function hotlist(song, results,i) { 
+      let a = `<a href="./song?id=${results.id}" class="hot-item">
+      <div class="hot-item-num">${'0'+(i + 1)}</div>
+      <div class="hot-item-content border">
+        <div class="hot-item-context">
+          <h3>${song.name}</h3>
+          <p class="textoverflow">
+            <svg class="icon iconsq" aria-hidden="true">
+              <use xlink:href="#icon-SQ"></use>
+            </svg>
+            ${song.singer} - ${song.name}
+        </div>
+        <div class="hot-item-play">
+          <svg class="icon iconplay" aria-hidden="true">
+            <use xlink:href="#icon-play"></use>
+          </svg>
+        </div>
+      </div>
+    </a>`;
+      $(".hot-content").append(a);
+    } 
 });

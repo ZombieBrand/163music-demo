@@ -20,7 +20,7 @@ $(function() {
   /**--------获取歌曲ID等信息--------- */
   var id = getParameterByName("id");
   var query = new AV.Query("Song");
-  var video = document.createElement("video");
+  var audio = document.createElement("audio");
   query.get(id).then(function(song) {
     let { url, lyric, name, singer, cover } = song.attributes;
     console.log(song);
@@ -39,20 +39,20 @@ $(function() {
   });
   /**--------播放操作--------- */
   function initPlayer(url) {
-    video.src = url;
-    video.oncanplay = function() {
-      video.pause();
+    audio.src = url;
+    audio.oncanplay = function() {
+      audio.pause();
       $(".iconstop").on("click", function() {
         $(this).toggleClass("active");
         $(".iconplay").toggleClass("active");
-        video.pause();
+        audio.pause();
         $(".circle").toggleClass("playing");
         $(".stylus").toggleClass("playing");
       });
       $(".iconplay").on("click", function() {
         $(this).toggleClass("active");
         $(".iconstop").toggleClass("active");
-        video.play();
+        audio.play();
         $(".circle").toggleClass("playing");
         $(".stylus").toggleClass("playing");
       });
@@ -73,7 +73,7 @@ $(function() {
       });
     });
     setInterval(function() {
-      let current = video.currentTime;
+      let current = audio.currentTime;
       for (var i = 0; i < array.length; i++) {
         if (i === array.lenght - 1) {
           $(".lyricTransform>p")
