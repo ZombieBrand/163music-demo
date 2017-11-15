@@ -172,7 +172,24 @@
     margin-top:0;
   }
 }
-@media screen and (max-height: 600px) {
+@media screen and (max-height: 600px){
+  .lyric {
+    height:15vw;
+  }
+  .lyricTransform > p{
+    font-size: 14px;
+    line-height: 5vw;
+  }
+  .songlyric > h1 {
+    font-size: 16px;
+    margin-bottom: 1.2vw;
+  }
+  .songlyric {
+    transform:translateY(50%);
+    margin-top:0;
+  }
+}
+@media screen and (max-height: 550px) {
   .lyric {
     height:10vw;
   }
