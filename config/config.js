@@ -1,0 +1,11 @@
+module.exports={
+    HTMLDirs:[
+        "home",
+        "playlist",
+        "song",
+    ],
+    cssPublicPath:"../",
+    imgOutputPath:"img/",
+    cssOutputPath:"./css/styles.css",
+    devServerOutputPath:"../dist",
+}

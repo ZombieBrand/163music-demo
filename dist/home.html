@@ -5,13 +5,10 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no,maximum-scale=1.0,minimum-scale=1.0">
 	<title>163music-demo</title>
-	<link rel="stylesheet" href="./home.css">
-	<link rel="stylesheet" href="./reset.css">
-	<link rel="stylesheet" href="./vendors/loaders.min.css">
-</head>
+<link href="css/commons.35430b77fcc755d4c53e.css" rel="stylesheet"><link href="css/home.35430b77fcc755d4c53e.css" rel="stylesheet"></head>
 
 <body>
-	<!-- 顶部导航栏 -->
+	<!-- 顶o部导航栏 -->
 	<div class="topwarperflexd">
 		<section class="topbar">
 			<div class="log">
@@ -48,7 +45,7 @@
 			<a href="http://m.music.163.com/m/applink/?scheme=orpheus%3A%2F%2Fhome%3Fhome&dl=https%3A%2F%2Fitunes.apple.com%2Fapp%2Fid590338362">下载APP</a>
 		</section>
 		<nav class="globaltabs">
-			<ol>
+			<ol id="navBar">
 				<li class="active">
 					<div>
 						<span>推荐音乐</span>
@@ -67,10 +64,10 @@
 			</ol>
 		</nav>
 	</div>
-	<div class="contentwarper">
+	<div class="contentwarper" id="contentwarper">
 		<section class="playlist active no-collapse">
 			<h1 class="sectionTitle">推荐歌单</h1>
-			<ol class="warperMusic">
+			<ol class="warperMusic" id="warperMusic">
 				<li>
 					<div class="warperimg">
 						<img src="//ww4.sinaimg.cn/large/0060lm7Tgy1fitxtfsrxnj306w06wabz.jpg">
@@ -199,7 +196,7 @@
 				<svg class="icon searchicon" aria-hidden="true">
 					<use xlink:href="#icon-search"></use>
 				</svg>
-				<input type="search" class="searchIp" id="searchIp" autocomplete="off">
+				<input type="search" class="searchIp" id="searchIp" autocomplete="on">
 				<label class="holder">搜索歌曲、歌手、专辑</label>
 			</div>
 			<div class="borderBt"></div>
@@ -208,24 +205,13 @@
 			<section class="hotMusic">
 				<h2>热门搜索</h2>
 				<ul class="songName">
-					<ol>时光之废</ol>
-					<ol>好想要</ol>
-					<ol>Pizza</ol>
-					<ol>Wonderful</ol>
-					<ol>追光者</ol>
-					<ol>I Do</ol>
-					<ol>There for you</ol>
-					<ol>Lucky</ol>
-					<ol>Woman</ol>
-					<ol>许魏洲</ol>
 				</ul>
 			</section>
 		</section>
 	</div>
-	<script src="./vendors/jquery.min.js"></script>
-	<script src="./vendors/av-min.js"></script>
-	<script src="./home.js"></script>
+	<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 	<script src="//at.alicdn.com/t/font_453429_j38ybifb2rxav2t9.js"></script>
+	<script src="//cdn1.lncld.net/static/js/3.4.2/av-min.js"></script>
 	<style>
 		.loader {
 			width: 16vw;
@@ -236,6 +222,6 @@
 			background-color: #cd4437;
 		}
 	</style>
-</body>
+<script type="text/javascript" src="commons.bundle.js"></script><script type="text/javascript" src="js/home.bundle.35430b77fcc755d4c53e.js"></script></body>
 
 </html>

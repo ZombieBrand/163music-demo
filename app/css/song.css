@@ -17,7 +17,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -1;
+  z-index: 0;
   filter: blur(20px);
   transform: scale(1.5);
   transform-origin: 0 0;
@@ -27,7 +27,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -1;
+  z-index: 0;
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.4);
@@ -76,7 +76,7 @@
   transform: translate(-50%, -50%);
   margin-top: 19.324vw;
   border-radius: 50%;
-  z-index: -1;
+  z-index: 0;
 }
 .circle.playing > .coverimg {
   animation: spin 20s linear infinite;
@@ -208,6 +208,7 @@
 }
 /*-------------actions-------------*/
 .actions {
+  z-index:1;
 }
 .loadingapp {
   width: 100vw;

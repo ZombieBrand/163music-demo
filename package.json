@@ -2,16 +2,48 @@
   "name": "163music-demo",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "postcss.config.js",
+  "dependencies": {},
+  "devDependencies": {
+    "autoprefixer": "^7.2.3",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "clean-webpack-plugin": "^0.1.17",
+    "cross-env": "^5.1.1",
+    "css-loader": "^0.28.7",
+    "eslint": "^4.13.1",
+    "eslint-loader": "^1.9.0",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.6",
+    "html-webpack-plugin": "^2.30.1",
+    "http-server": "^0.10.0",
+    "jquery": "^3.2.1",
+    "leancloud-storage": "^3.4.2",
+    "loaders.css": "^0.1.2",
+    "postcss-loader": "^2.0.9",
+    "style-loader": "^0.19.1",
+    "url-loader": "^0.6.2",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.9.7",
+    "webpack-merge": "^4.1.1"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "export NODE_ENV=dev && webpack-dev-server --open",
+    "build": "export NODE_ENV=prod && webpack -p",
+    "lint": "export NODE_ENV=lint && webpack-dev-server --open",
+    "serve": "http-server ./dist -p 8888 -o",
+    "serve2": "http-server ./dist -p 8888"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZombrBrand/163music-demo.git"
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "jquery": "^3.2.1",
-    "leancloud-storage": "^3.3.1",
-    "loaders.css": "^0.1.2",
-    "npm": "^5.5.1"
-  }
+  "bugs": {
+    "url": "https://github.com/ZombrBrand/163music-demo/issues"
+  },
+  "homepage": "https://github.com/ZombrBrand/163music-demo#readme"
 }
